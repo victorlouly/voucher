@@ -31,27 +31,27 @@ function redrawMeme() {
   ctx.textAlign = "center"; ctx.fillStyle="white";ctx.strokeStyle = '#ff000000';
 
  
-  wrapText(ctx, topText, c.width/1.7, 393, maxWidth, lineHeight);
+  wrapText(ctx, topText, c.width/1.4, 408, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
 
-  wrapText(ctx, indicou, c.width/1.9, 239, maxWidth, lineHeight);
+  wrapText(ctx, indicou, c.width/1.7, 258, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
 
-  wrapText(ctx, cpf_indicou, c.width/1.5, 273, maxWidth, lineHeight);
+  wrapText(ctx, cpf_indicou, c.width/2, 286, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
   
-  wrapText(ctx, cpf_indicado, c.width/2, 376, maxWidth, lineHeight);
+  wrapText(ctx, cpf_indicado, c.width/2, 380, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
 
-  wrapText(ctx, meiotext, c.width/2, 256, maxWidth, lineHeight);
+  wrapText(ctx, meiotext, c.width/1.15, 287, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
   
-  wrapText(ctx, bottomText, c.width/1.7, 306, maxWidth, lineHeight);
+  wrapText(ctx, bottomText, c.width/1.7, 352, maxWidth, lineHeight);
   }
 
 function wrapText(context, text, x, y, maxWidth, lineHeight) {
