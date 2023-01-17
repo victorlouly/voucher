@@ -4,7 +4,7 @@ var maxWidth = 400;
 var lineHeight = 50;
 var image = new Image();
 
-image.src = "https://i.ibb.co/H7sdgNq/10-Voucher-parab-ns-Online-1.png"
+image.src = "https://i.ibb.co/qYwThgz/voucher-2023-Prancheta-1.png"
 
 
 image.onload=function() {
