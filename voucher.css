@@ -12,7 +12,7 @@
     text-align: left;
     display: inline-block;
     vertical-align: top;
-    margin-top: -4rem;
+    margin-top: -3rem;
     margin-left: 25px;
   }
   
@@ -22,9 +22,9 @@
     text-align: center;
   }
   
-  #toptext, #bottomtext, #meiotext {
+  #toptext, #bottomtext, #meiotext, #indicou, #cpf_indicou, #cpf_indicado {
     padding: 5px;
-    margin-top: 4rem;
+    margin-top: 3rem;
     width: 406px;
     border-radius: 5px;
     border: 2px solid rgb(168, 168, 168);
