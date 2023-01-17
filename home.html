@@ -9,25 +9,25 @@
 </head>
 <body>
     <h1>Gerar Voucher</h1>
-    <form></form>
+    <form>
     <div id="wrapper">
     <div id="canvas"><canvas id="c" width="512" height="512"></canvas></div>
     <div id="textinput">
     
-      <input name="consultor_responsave" class="highlight question" id="toptext" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
+      <input name="responsavel" class="highlight question" id="toptext" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
       <label for="nme"><span>Consultor responsavel</span></label>
     
-      <input name="quem_indicou" class="highlight question" id="indicou" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
+      <input name="indicou" class="highlight question" id="indicou" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
       <label for="nme"><span>Quem indicou ?</span></label>
-      <input name="cpf_indicou" class="highlight question" id="cpf_indicou" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
+      <input name="cpfindicou" class="highlight question" id="cpf_indicou" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
       <label for="nme"><span>CPF</span></label>
     
-      <input name="qual_turma" class="highlight question" id="meiotext" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
+      <input name="turma" class="highlight question" id="meiotext" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
       <label for="nme"><span>Qual turma ?</span></label>
     
       <input name="indicado" class="highlight question" id="bottomtext" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
       <label for="nme"><span>Qual nome do indicado ?</span></label>
-      <input name="cpf_indicado" class="highlight question" id="cpf_indicado" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
+      <input name="cpfindicado" class="highlight question" id="cpf_indicado" type="text" value="" required="" autocomplete="off" style="box-shadow: 0 0 0 0;border: 0 none;outline: 0;">
       <label for="nme"><span>CPF</span></label>
     
     
@@ -36,10 +36,9 @@
     </div>
     </form>
   </section>
-  
- 
 </body>
 </html>
 
 <script  src="./voucher.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js'></script>

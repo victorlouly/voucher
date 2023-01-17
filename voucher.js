@@ -4,13 +4,16 @@ var maxWidth = 400;
 var lineHeight = 50;
 var image = new Image();
 
-image.src = "https://i.ibb.co/6WSBLgJ/10-Voucher-parab-ns-Online.png"
+image.src = "https://i.ibb.co/H7sdgNq/10-Voucher-parab-ns-Online-1.png"
 
 
 image.onload=function() {
   ctx.drawImage(image, 0, 0, c.width, c.height);
   redrawMeme();
 }
+
+
+
   
 document.getElementById('submit').onclick = redrawMeme;
 
@@ -21,34 +24,34 @@ function redrawMeme() {
   var indicou = document.getElementById('indicou').value;
   var cpf_indicou = document.getElementById('cpf_indicou').value;
   var cpf_indicado = document.getElementById('cpf_indicado').value;
-  
+
   ctx.drawImage(image, 0, 0, c.width, c.height);
   
   ctx.font = "12pt Arial";
   ctx.textAlign = "center"; ctx.fillStyle="white";ctx.strokeStyle = '#ff000000';
 
  
-  wrapText(ctx, topText, c.width/1.7, 430, maxWidth, lineHeight);
+  wrapText(ctx, topText, c.width/1.7, 393, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
 
-  wrapText(ctx, indicou, c.width/1.9, 258, maxWidth, lineHeight);
+  wrapText(ctx, indicou, c.width/1.9, 239, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
 
-  wrapText(ctx, cpf_indicou, c.width/1.5, 310, maxWidth, lineHeight);
+  wrapText(ctx, cpf_indicou, c.width/1.5, 273, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
   
-  wrapText(ctx, cpf_indicado, c.width/1.5, 414, maxWidth, lineHeight);
+  wrapText(ctx, cpf_indicado, c.width/2, 376, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
 
-  wrapText(ctx, meiotext, c.width/2, 275, maxWidth, lineHeight);
+  wrapText(ctx, meiotext, c.width/2, 256, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
   
-  wrapText(ctx, bottomText, c.width/1.7, 343, maxWidth, lineHeight);
+  wrapText(ctx, bottomText, c.width/1.7, 306, maxWidth, lineHeight);
   }
 
 function wrapText(context, text, x, y, maxWidth, lineHeight) {
@@ -82,3 +85,38 @@ textbox[1].addEventListener('click', function() {
   this.select();
 });
 
+const handleSubmite = (event) => {
+  event.preventDefault();
+
+  const responsavel = document.querySelector('input[name=responsavel').value;
+  const indicou = document.querySelector('input[name=indicou').value;
+  const cpfindicou = document.querySelector('input[name=cpfindicou').value;
+  const turma = document.querySelector('input[name=turma').value;
+  const indicado = document.querySelector('input[name=indicado').value;
+  const cpfindicado = document.querySelector('input[name=cpfindicado').value;
+  
+
+
+
+  fetch('https://api.sheetmonkey.io/form/hSyYeuSaYmCPVwRGiSkyKn', {
+
+  method: 'post',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ responsavel, indicou, cpfindicou, turma, indicado, cpfindicado}),
+  });
+}
+
+document.querySelector('form').addEventListener('submit', handleSubmite);
+
+function time()
+{
+today=new Date();
+h=today.getHours();
+m=today.getMinutes();
+s=today.getSeconds();
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+setTimeout('time()',500);
+}
