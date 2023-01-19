@@ -4,14 +4,13 @@ var maxWidth = 400;
 var lineHeight = 50;
 var image = new Image();
 
-image.src = "https://i.ibb.co/LPkpScx/voucher-2023-Prancheta-1-1.png"
+image.src = "https://i.ibb.co/JxFz6zM/Whats-App-Image-2023-01-19-at-10-28-56.jpg"
 
 
 image.onload=function() {
   ctx.drawImage(image, 0, 0, c.width, c.height);
   redrawMeme();
 }
-
 
 
   
@@ -35,7 +34,8 @@ function redrawMeme() {
   
   ctx.font = "12pt Arial";
 
-  wrapText(ctx, indicou, c.width/1.7, 258, maxWidth, lineHeight);
+  wrapText(ctx, indicou, c.width/1.7
+  , 258, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
 
@@ -46,6 +46,7 @@ function redrawMeme() {
   wrapText(ctx, cpf_indicado, c.width/2, 380, maxWidth, lineHeight);
   
   ctx.font = "12pt Arial";
+
 
   wrapText(ctx, meiotext, c.width/1.15, 287, maxWidth, lineHeight);
   
